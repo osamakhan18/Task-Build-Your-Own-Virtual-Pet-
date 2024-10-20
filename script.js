@@ -1,9 +1,9 @@
 var pet ={
-    name:"jack",
-    type:"Dog",
-    age:10,
-    happiness:70,
-    hunger:30,
+    name:prompt("what is the name of your pet"),
+    type:prompt('what is type'),
+    age:+prompt("Enter the age of your pet"),
+    happiness:+prompt('Enter their Happiness index'),
+    hunger:+prompt('Enter their Hunger index '),
     feed:function(){
         hunger = Math.max(this.hunger-20,0);
     },
@@ -16,16 +16,13 @@ var pet ={
          this.age += 1;
        this.happiness -=5;
        this.hunger +=10;
+       alert(`your pet age is ${this.age}, happiness is ${this.happiness}, hunger is ${this.hunger}`)
+
 
     },
-    // getinfo:function(){
-    //    alert(this.age)
-    //    alert(this.happiness)
-    //    alert(this.hunger)
-    // }
     
 
 }
 
-var petinfo = pet.getinfo();
+var petinfo = pet.agepet();
 console.log(petinfo)
